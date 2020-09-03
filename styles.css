@@ -1,0 +1,143 @@
+/* Master Styles */
+
+body {
+    font-family: "Lato", sans-serif;
+    margin: 0px;
+    background-color: #1c1c1c;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+/*-------- Nav Styles start here----- */
+
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 38px;
+}
+
+.left-side {
+    display: flex;
+}
+
+.nav-wrapper>.left-side>div {
+    margin-right: 20px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+.nav-link-wrapper {
+    height: 22px;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.5s;
+}
+
+.nav-link-wrapper a {
+    /* This class the color of "Home" and "About"  */
+    color: #b36b00;
+    text-decoration: none;
+    transition: color 0.5s;
+}
+
+.nav-link-wrapper:hover {
+    /* This class gives the red transition effect on the bottom border */
+    border-bottom: 1px solid red;
+}
+
+.nav-link-wrapper a:hover {
+    /* This class ensures that the color of "Home" and "About" after hovering to it  */
+    color: orange;
+}
+
+.active-nav-link {
+    /* This class makes the border bottom visible when the page is selected */
+    border-bottom: 1px solid red;
+}
+
+.active-nav-link a {
+    /* This class makes the nav option orange and visible when the page is selected and overrides all other default behaviour*/
+    color: orange !important;
+}
+
+/* Portfolio styles start here*/
+
+.portfolio-items-wrapper {
+    /* This class makes makes three different columns for all the items */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.portfolio-item-wrapper {
+    /* This gives more flexibility to how to position the items inside the page */
+    position: relative;
+}
+
+.portfolio-img-background {
+    /* This class inserts images and fits them accordingly and gives them heigth and width */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 400px;
+    width: 100%;
+}
+
+.img-text-wrapper {
+    /* This class aligns the text to and inside the images */
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.logo-wrapper img {
+    width: 50%;
+    margin-bottom: 20px;
+}
+
+.img-text-wrapper .subtitle {
+    /* This class makes the subtitle transparent and makes it visible after hovering  */
+    transition: 1s;
+    font-weight: 600px;
+    color: transparent;
+}
+
+.img-text-wrapper:hover .subtitle {
+    /* This class changes the color and makes the subtitiles colored when hovering on it */
+    font-weight: 600px;
+    color: lightseagreen;
+}
+
+.img-darken {
+    /* This class darkens and creates a transition when hovering to the image for the text. This class is called by the javascript and untill then, this wont work */
+    transition: 1s;
+    filter: brightness(10%);
+}
+
+/* This is the start of the About section------ */
+
+.two-column-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.profile-image-wrapper img {
+    width: 100%;
+}
+
+.profile-content-wrapper {
+    padding: 30px;
+}
+
+.profile-content-wrapper h1 {
+    /* This class gives color to the heading  */
+    color: red;
+}
